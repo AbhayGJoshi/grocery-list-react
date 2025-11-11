@@ -2,3 +2,17 @@ npx create-react-app grocery-list
 cd grocery-list
 npm start
 
+This will:
+Create a new React app named grocery-list
+Install all dependencies
+Start the app on http://localhost:3000
+
+
+rnfe
+
+{list.map((_itemToDisplay, index) => (
+          <li key={index}> {_itemToDisplay}</li>
+        ))}
+
+
+setList(list.filter((_placeholderItem, id) => id !== index));        

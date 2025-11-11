@@ -1,38 +1,41 @@
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input-section {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  padding: 8px;
+  width: 200px;
+  margin-right: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.grocery-list {
+  list-style-type: decimal;
+  list-style-position: outside; /* makes numbers align with text */
+  width: 300px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+}
+
+.grocery-list li {
+  background-color: #f2f2f2;
+  margin: 6px 0;
+  padding: 8px 12px;
+  border-radius: 5px;
+
+  /* ✅ proper spacing for number, item text, and delete button */
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
