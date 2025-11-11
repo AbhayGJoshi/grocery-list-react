@@ -1,0 +1,4 @@
+npx create-react-app grocery-list
+cd grocery-list
+npm start
+
