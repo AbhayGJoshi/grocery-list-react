@@ -1,0 +1,45 @@
+React Project to GitHub – Step-by-Step Commands
+====================================================
+
+1) Go to your React project folder
+-----------------------------------
+cd path/to/your/react-project
+# Example:
+cd C:\Users\Abhay\Documents\grocery-list-react
+
+2) Initialize Git
+------------------
+git init
+
+3️) Add all files
+-----------------
+git add .
+
+4) Commit your project
+-----------------------
+git commit -m "Initial commit"
+
+5) Connect to your GitHub repository
+-------------------------------------
+# Replace with your repository URL
+git remote add origin https://github.com/AbhayGJoshi/grocery-list-react.git
+
+6) Rename your branch to main
+------------------------------
+git branch -M main
+
+7) Push your code to GitHub
+----------------------------
+git push -u origin main
+
+8) Verify
+-------------
+Go to your GitHub repository URL → You should see your files uploaded.
+
+Future Updates
+-----------------
+Whenever you make new changes:
+git add .
+git commit -m "Updated grocery list logic"
+git push
+
