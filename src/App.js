@@ -45,44 +45,67 @@ const App = () => {
       imageUrl: "./GroceryCatelog/potato.png",
     },
     {
-      category: "fruits",
-      name: "apple",
+      category: "vegetables",
+      name: "mirchi",
       unit: "kg",
       qty: 1,
-      imageUrl: "./GroceryCatelog/shimla-mirch.png",
+      imageUrl: "./GroceryCatelog/chillies.png",
+    },
+    {
+      category: "vegetables",
+      name: "shimla mirchi",
+      unit: "kg",
+      qty: 1,
+      imageUrl: "./GroceryCatelog/shimla-mirch32.png",
     },
   ];
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}
+    >
       <Typography variant="h4" sx={{ padding: "20px" }}>
         Grocery List
       </Typography>
 
-      <div>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 16 }}>
         {grocery.map((item, index) => (
-          <Card sx={{ maxWidth: 245 }} key={index}>
-            <CardMedia
-              sx={{ height: 100 }}
-              title={item.category}
-              image={item.imageUrl}
-              alt={item.name}
-            />
+          <Card sx={{ maxWidth: 245, border: "1px solid" }} key={index}>
             <CardContent>
               {/* Category shown visibly */}
-              <Typography variant="subtitle2" color="text.secondary">
-                {item.category}
-              </Typography>
+              <Typography
+                variant="subtitle2"
+                color="text.secondary"
+                fontWeight="bold"
+              ></Typography>
 
               {/* Item name */}
+              <Typography gutterBottom variant="subtitle2" component="div">
+                {item.category}
+              </Typography>
               <Typography gutterBottom variant="h5" component="div">
                 {item.name}
               </Typography>
-
               {/* Optional quantity/unit info */}
               <Typography variant="body2" color="text.secondary">
                 {item.qty} {item.unit}
               </Typography>
             </CardContent>
+            <CardMedia
+              sx={{
+                height: 100,
+                width: 150,
+                objectFit: "contain",
+                borderRadius: 1,
+              }}
+              title={item.category}
+              image={item.imageUrl}
+              alt={item.name}
+            />
             <CardActions>
               <Button size="small">Add+</Button>
               <Button size="small">Del-</Button>
